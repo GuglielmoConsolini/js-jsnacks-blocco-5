@@ -15,12 +15,31 @@ const zucchine = [
 ];
 
 let pesoTotale = 0;
+let zucchinePiccole =[]
+let zucchineGrandi =[]
+let pesoPiccole = 0
+let pesoGrandi = 0
 
 for (let zucchina of zucchine) {
     pesoTotale += zucchina.peso;
+    if(zucchina.lunghezza < 15){
+        zucchinePiccole.push(zucchina)
+    }else{
+        zucchineGrandi.push(zucchina)
+    }
 }
-
+console.log(zucchinePiccole)
+console.log(zucchineGrandi)
 console.log("Il peso totale di tutte le zucchine è:", pesoTotale, "kg");
 
 // SNACK 2
 
+for(let zucchinaPiccola of zucchinePiccole){
+    pesoPiccole += zucchinaPiccola.peso;
+}
+ console.log(pesoPiccole)
+
+for(let zuccinaGrande of zucchineGrandi){
+    pesoGrandi += zuccinaGrande.peso;    
+}
+console.log(pesoGrandi)
